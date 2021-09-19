@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<title>Market Themes Dashboard</title>
+
+<!--import script files needed from plotly and bootstrap-->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT" crossorigin="anonymous"></script> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+</head>
+
+<body>
+
+    <header>
+      <div class="collapse bg-dark" id="navbarHeader">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-8 col-md-7 py-4">
+              <h4 class="text-white">About</h4>
+              <p class="text-muted">This is a sample web dashboard that can be extended to track market themes.
+                  Developed using Python, HTML, CSS, Javascript.
+                  <br>Created by Evangelos Protopapadakis. </p>
+            </div>
+            <div class="col-sm-4 offset-md-1 py-4">
+              <h4 class="text-white">Contact</h4>
+              <ul class="list-unstyled">
+                <li><a href="https://www.linkedin.com/in/vprotopapadakis/"  target="_blank" class="text-white">LinkedIn</a></li>
+                <li><a href="https://github.com/vProto"  target="_blank" class="text-white">Github</a></li>
+                  <li><a href="mailto:p.evangelos@columbia.edu?subject = Market Themes Dashboard" class="text-white">Email</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="navbar navbar-dark bg-dark box-shadow">
+
+                          <div id="menu-options">
+            <ul class="navbar-nav mr-0 float-right">
+      <li class="nav-item">
+        <a class="nav-link" href="/index">Indices</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/factors">Factors</a>
+      </li>
+
+    </ul>
+    </div>
+
+        <div class="container d-flex justify-content-between">
+          <a href="#" class="navbar-brand d-flex align-items-center">
+            <strong>Market Themes</strong>
+
+          </a>
+
+
+
+
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+
+
+
+
+        </div>
+
+
+
+      </div>
+    </header>
+
+
+<!--middle section-->       
+<div class="row">
+
+
+    <!--visualizations column-->        
+    <div class="col-11">
+
+        <!--chart descriptions-->
+        <div id="middle-info" class="text-center mt-6">
+
+            <h3 id="tag-line">ETF Performance</h3>
+
+        </div>
+
+        <!--charts-->       
+        <div id="charts">
+                    
+            <!--top two charts-->       
+            <div class="row mb-6">
+                <div class="col-6">
+                    <div id="{{ids[0]}}"></div>
+                </div>
+                <div class="col-6">
+                    <div id="{{ids[1]}}"></div>
+                </div>
+            </div>
+
+            <!--middle two charts-->
+        <div class="row mb-6">
+                <div class="col-6">
+                    <div id="chart3">
+                        <div id="{{ids[2]}}"></div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div id="chart4">
+                        <div id="{{ids[3]}}"></div>
+                    </div>
+                </div>
+        </div>
+        
+        </div>
+
+                <!--chart descriptions-->
+
+        <div id="charts">
+
+        <div class="row mb-6">
+                <div class="col-6">
+                    <div id="chart5">
+                        <div id="{{ids[4]}}"></div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div id="chart6">
+                        <div id="{{ids[5]}}"></div>
+                    </div>
+                </div>
+        </div>
+
+            <div class="row mb-6">
+                <div class="col-6">
+                    <div id="chart7">
+                        <div id="{{ids[6]}}"></div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div id="chart8">
+                        <div id="{{ids[7]}}"></div>
+                    </div>
+                </div>
+        </div>
+
+                        <div class="row mb-6">
+                <div class="col-6">
+                    <div id="chart8">
+                        <div id="{{ids[8]}}"></div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div id="chart9">
+                        <div id="{{ids[9]}}"></div>
+                    </div>
+                </div>
+        </div>
+
+        </div>
+        </div>
+
+</div>
+
+<!--footer section-->               
+<div id="footer" class="container"></div>
+
+</body>
+
+
+<footer>
+
+    <script type="text/javascript">
+        // plots the figure with id
+        // id much match the div id above in the html
+        var figures = {{figuresJSON | safe}};
+        var ids = {{ids | safe}};
+        for(var i in figures) {
+            Plotly.plot(ids[i],
+                figures[i].data,
+                figures[i].layout || {});
+        }
+    </script>
+    
+</footer>
+
+
+</html>
