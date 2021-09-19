@@ -1,6 +1,5 @@
-yfinance
 plotly
+yfinance
 pandas
-flask
 numpy
-json
+flask
