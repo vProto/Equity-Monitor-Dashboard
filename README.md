@@ -1,5 +1,5 @@
 ## Description
-This is a sample web dashboard that can be extended to track market themes. Developed using Python, HTML, CSS, Javascript. 
+This is a sample web dashboard that tracks equity market indices and factor themes. Developed using Python, HTML, CSS, Javascript. 
 Created by Evangelos Protopapadakis.
 
 ## Deployment
